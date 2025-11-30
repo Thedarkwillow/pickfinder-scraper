@@ -1,0 +1,36 @@
+node_modules/
+cookies.json
+service_account.json
+*.log
+scrape_*.json
+.env
+.DS_Store
+
+# TypeScript build output
+dist/
+
+# Cookies directory
+.cookies/
+cookies/
+
+# Output directory
+output/
+
+# Error screenshots
+error-screenshot-*.png
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+

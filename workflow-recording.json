@@ -1,0 +1,26 @@
+{
+  "recordedAt": "2025-11-28T17:30:24.742Z",
+  "finalUrl": "https://www.pickfinder.app/players/nhl/08i7i7gpqkp9wtl?from=projections&stat=1&line=0.5&game=ztfgeq5fx67nerq",
+  "actions": [
+    {
+      "timestamp": "2025-11-28T17:26:54.184Z",
+      "action": "Initial navigation",
+      "url": "https://www.pickfinder.app/"
+    },
+    {
+      "timestamp": "2025-11-28T17:27:21.107Z",
+      "action": "Navigation",
+      "url": "https://www.pickfinder.app/players/nhl/97f0egxxfyrk9ij?from=projections&stat=5&line=1.5&game=ztfgeq5fx67nerq"
+    },
+    {
+      "timestamp": "2025-11-28T17:27:45.704Z",
+      "action": "Navigation",
+      "url": "https://www.pickfinder.app/projections/nhl"
+    },
+    {
+      "timestamp": "2025-11-28T17:27:50.544Z",
+      "action": "Navigation",
+      "url": "https://www.pickfinder.app/players/nhl/08i7i7gpqkp9wtl?from=projections&stat=1&line=0.5&game=ztfgeq5fx67nerq"
+    }
+  ]
+}

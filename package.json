@@ -1,0 +1,46 @@
+{
+  "name": "pickfinder-scraper",
+  "version": "2.0.0",
+  "description": "Full automation workflow for PickFinder with Google OAuth login and Google Sheets integration",
+  "main": "dist/scrape.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "scrape": "node --max-old-space-size=4096 --import tsx src/index.ts",
+    "scrape-today": "node --max-old-space-size=4096 --import tsx scrape-today-players.ts",
+    "props": "node --max-old-space-size=4096 --import tsx src/props/collectProps.ts",
+    "all": "node --max-old-space-size=4096 --import tsx src/run-all.ts",
+    "dev": "tsx watch src/index.ts",
+    "start": "node index.js",
+    "record": "node --max-old-space-size=4096 --import tsx record-workflow.ts",
+    "install-browsers": "playwright install chromium"
+  },
+  "keywords": [
+    "scraper",
+    "automation",
+    "playwright",
+    "pickfinder",
+    "typescript",
+    "puppeteer",
+    "puppeteer-extra",
+    "stealth",
+    "google-login",
+    "google-sheets"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "playwright": "^1.40.0",
+    "googleapis": "^128.0.0",
+    "dotenv": "^16.3.1",
+    "google-auth-library": "^9.14.1",
+    "puppeteer": "^23.0.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3",
+    "tsx": "^4.7.0"
+  }
+}

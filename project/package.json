@@ -1,0 +1,25 @@
+{
+  "name": "pickfinder-defense-scraper",
+  "version": "1.0.0",
+  "description": "Scrape PickFinder NHL opponent positional strength data and upload to Google Sheets",
+  "main": "dist/scrape.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p ./tsconfig.json",
+    "scrape": "node --max-old-space-size=4096 --import tsx ./src/scrape.ts"
+  },
+  "dependencies": {
+    "puppeteer": "^23.0.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "googleapis": "^128.0.0",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3",
+    "tsx": "^4.7.0"
+  }
+}
+
+

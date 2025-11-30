@@ -1,0 +1,23 @@
+[
+  {
+    "name": "SESSION_ID",
+    "value": "your_session_cookie_value_here",
+    "domain": ".pickfinder.app",
+    "path": "/",
+    "expires": 1735689600,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "Lax"
+  },
+  {
+    "name": "__Secure-3PSID",
+    "value": "your_google_cookie_value_here",
+    "domain": ".google.com",
+    "path": "/",
+    "expires": 1735689600,
+    "httpOnly": true,
+    "secure": true,
+    "sameSite": "None"
+  }
+]
+
