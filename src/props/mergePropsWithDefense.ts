@@ -106,8 +106,6 @@ function findDefenseStrength(
   // Try matching with common stat aliases - improved mapping
   const statAliases: Record<string, string[]> = {
     'points': ['pts', 'point', 'points'],
-    'goals': ['goal', 'goals'],
-    'assists': ['asts', 'assist', 'assists'],
     'shots on goal': ['sog', 'shots', 'shot', 'shots on goal', 'shot on goal'],
     'hits': ['hit', 'hits'],
     'blocked shots': ['blocks', 'blocked', 'blocked shots', 'block'],

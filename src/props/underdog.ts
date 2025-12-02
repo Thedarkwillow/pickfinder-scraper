@@ -80,9 +80,6 @@ function normalizeStatType(statType: string): string {
   const statMap: Record<string, string> = {
     'Points': 'Points',
     'Pts': 'Points',
-    'Goals': 'Goals',
-    'Assists': 'Assists',
-    'Asts': 'Assists',
     'Shots on Goal': 'Shots on Goal',
     'SOG': 'Shots on Goal',
     'Shots': 'Shots on Goal',
@@ -646,7 +643,7 @@ async function extractPropsFromPage(page: Page): Promise<UnderdogProp[]> {
           (text.match(/\b[A-Z][a-z]+ [A-Z][a-z]+\b/) || // Player name pattern
            text.match(/\b[A-Z]{2,4}\b/)) && // Team abbreviation
           (text.match(/\d+\.?\d*/) || // Line value
-           text.match(/(Points|Goals|Assists|Shots|Hits|Blocks)/i)) // Stat category
+           text.match(/(Points|Shots|Hits|Blocks)/i)) // Stat category
         );
       });
     }
@@ -691,7 +688,7 @@ async function extractPropsFromPage(page: Page): Promise<UnderdogProp[]> {
         // Extract stat category
         let statCategory = '';
         const statKeywords = [
-          'Points', 'Goals', 'Assists', 'Shots on Goal', 'Shots', 'SOG',
+          'Points', 'Shots on Goal', 'Shots', 'SOG',
           'Hits', 'Blocked Shots', 'Blocks', 'Time On Ice', 'TOI',
           'Faceoffs Won', 'FOW', 'Faceoffs Lost', 'FOL', 'Faceoffs',
           'Goals Allowed', 'Saves', 'Fantasy Score',
@@ -891,9 +888,7 @@ async function extractPropsFromPage(page: Page): Promise<UnderdogProp[]> {
     'Shots on Goal',
     'Faceoffs Won',
     'Hits',
-    'Goals',
     'Points',
-    'Assists',
     'Blocked Shots',
     'Goals Allowed',
     'Goalie Saves',

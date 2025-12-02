@@ -138,7 +138,7 @@ async function extractPlayerInfo(page: Page): Promise<PlayerInfo> {
     const statSelectors = [
       '[class*="stat"]',
       '[class*="prop"]',
-      'span:has-text("SOG"), span:has-text("Shots"), span:has-text("Goals"), span:has-text("Points")',
+      'span:has-text("SOG"), span:has-text("Shots"), span:has-text("Points")',
     ];
 
     for (const selector of statSelectors) {

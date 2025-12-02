@@ -13,7 +13,8 @@
     "dev": "tsx watch src/index.ts",
     "start": "node index.js",
     "record": "node --max-old-space-size=4096 --import tsx record-workflow.ts",
-    "install-browsers": "playwright install chromium"
+    "install-browsers": "playwright install chromium",
+    "clean-goals-assists": "node --max-old-space-size=4096 --import tsx scripts/removeGoalsAssistsFromSheets.ts"
   },
   "keywords": [
     "scraper",

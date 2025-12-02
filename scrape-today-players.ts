@@ -414,7 +414,7 @@ async function extractDefenseDataFromPage(page: Page): Promise<Array<{ position:
       const allDivs = Array.from(document.querySelectorAll<HTMLElement>('div'));
       for (const div of allDivs) {
         const text = (div.innerText || div.textContent || '').trim();
-        if (/(Shots|Assists|Goals|Hits|Points|Faceoffs|Saves|Goals Allowed)\s+\d+(?:th|st|nd|rd)/i.test(text)) {
+        if (/(Shots|Hits|Points|Faceoffs|Saves|Goals Allowed)\s+\d+(?:th|st|nd|rd)/i.test(text)) {
           const style = window.getComputedStyle(div);
           if (style.display !== 'none' && style.visibility !== 'hidden') {
             container = div;
@@ -431,9 +431,7 @@ async function extractDefenseDataFromPage(page: Page): Promise<Array<{ position:
     // Extract data from container
     const statCategories = [
       'Shots on Goal', 'Shots', 'SOG',
-      'Assists', 'Asts',
       'Faceoffs Won', 'FOW', 'Face Off Wins',
-      'Goals',
       'Hits',
       'Points', 'Pts',
       'Goals Allowed', 'GA',
@@ -1151,12 +1149,10 @@ async function scrapeDefenseData(page: Page, playerUrl: string, team: string, op
       }
       
       // Extract data from container - handle both table and div structures
-      // Look for stat categories with ranks (e.g., "Shots on Goal 25th", "Assists 12th", etc.)
+      // Look for stat categories with ranks (e.g., "Shots on Goal 25th", etc.)
       const statCategories = [
         'Shots on Goal', 'Shots', 'SOG',
-        'Assists', 'Asts',
         'Faceoffs Won', 'FOW', 'Face Off Wins',
-        'Goals',
         'Hits',
         'Points', 'Pts',
         'Goals Allowed', 'GA',
